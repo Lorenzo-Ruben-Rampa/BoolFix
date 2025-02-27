@@ -1,9 +1,9 @@
-import React from 'react'
-
-const SeriesCard = () => {
+export default function SeriesCard {
     return (
-        <div>SeriesCard</div>
+        <div className="card-container">
+            <div className="card">
+                <h3>{serie.name}</h3>
+            </div>
+        </div>
     )
 }
-
-export default SeriesCard

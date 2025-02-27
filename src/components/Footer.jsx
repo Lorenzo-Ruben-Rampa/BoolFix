@@ -2,6 +2,8 @@ export default function Footer() {
 
     return (
         <footer>
+            <p>scelta lingua, mini-logo,</p>
+            <p>Outlet: Titoli di momento Carousel, Motivi per abbonarsi Card, FAQ</p>
             <ul className="footer-links">
                 <li><a href="#domande-frequenti">FAQ </a></li>
                 <li><a href="#centro-assistenza">Centro assistenza</a></li>
@@ -24,3 +26,6 @@ export default function Footer() {
         </footer>
     );
 }
+
+
+

@@ -61,6 +61,12 @@ export default function Header(props) {
                         placeholder='Voto: '
                     />
                 </form>
+                <button onClick={fetchTodos}>Carica Todos</button>
+                <ul>
+                    {todos.map((todo) => (
+                        <li key={todo.id}>{todo.title}</li>
+                    ))}
+                </ul>
             </div>
         </header>
     );
