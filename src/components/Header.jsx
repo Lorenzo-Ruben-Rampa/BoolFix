@@ -24,7 +24,12 @@ export default function Header(props) {
                 <img src="/img/BoolFix-logo.png" alt="logo-BoolFix" />
             </div>
             <p>select lingua, Accedi, Motto con sotto prezzo, Inserisci email + button inizia</p>
-            <span><Flag code={code} /></span>
+            <Flag code="IT" />
+            <h3>
+                {filmCardProp.original_language === "en" ? <Flag code="GB" /> :
+                    filmCardProp.original_language === "it" ? <Flag code="IT" /> :
+                        "altro"}
+            </h3>
             <div>
                 <form id='formpost' action="#" onSubmit={handleSubmit}>
                     {/* valore nome post */}
@@ -32,12 +37,29 @@ export default function Header(props) {
                         type="text"
                         name="name"
                         value={movieRequest.name}
-                        placeholder='Nome post'
+                        placeholder='Titolo: '
                     />
-                    Titolo:
-                    Titolo Originale:
-                    Lingua:
-                    Voto:
+                    {/* valore nome post */}
+                    <input
+                        type="text"
+                        name="name"
+                        value={movieRequest.name}
+                        placeholder='Titolo Originale: '
+                    />
+                    {/* valore nome post */}
+                    <input
+                        type="text"
+                        name="name"
+                        value={movieRequest.name}
+                        placeholder='Lingua: '
+                    />
+                    {/* valore nome post */}
+                    <input
+                        type="text"
+                        name="name"
+                        value={movieRequest.name}
+                        placeholder='Voto: '
+                    />
                 </form>
             </div>
         </header>
