@@ -76,7 +76,7 @@ function App() {
   const [series, setSeries] = useState([]);
 
   return (
-    <GlobalContext.Provider value={{ fetchMovies, fetchSeries }}>
+    <GlobalContext.Provider value={{ fetchMovies, fetchSeries, movies, series }}>
       <BrowserRouter>
         <Routes>
           <Route element={<DefaultLayout />}>

@@ -1,9 +1,19 @@
-import React from 'react'
+import { useContext } from 'react';
+import GlobalContext from '../contexts/GlobalContext';
+import SeriesCard from '../components/MovieCard';
 
-const MoviesList = () => {
+export default function MovieList() {
+
+    //destrutturo useContext
+    const { movies } = useContext(GlobalContext)
     return (
-        <div>MoviesList</div>
+        <div>
+            <h1>Risultati per Film</h1>
+            <div>
+                {
+                    series.map(movie => <MoviesCard key={movie.id} movie={movie} />)
+                }
+            </div>
+        </div>
     )
 }
-
-export default MoviesList

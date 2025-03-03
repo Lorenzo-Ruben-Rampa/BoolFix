@@ -1,9 +1,19 @@
-import React from 'react'
+import { useContext } from 'react';
+import GlobalContext from '../contexts/GlobalContext';
+import SeriesCard from '../components/SeriesCard';
 
-const SeriesList = () => {
+export default function SeriesList {
+
+    //destrutturo useContext
+    const { series } = useContext(GlobalContext)
     return (
-        <div>SeriesList</div>
+        <div>
+            <h1>Risultati per Serie Tv</h1>
+            <div>
+                {
+                    series.map(serie => <SeriesCard key={serie.id} serie={serie} />)
+                }
+            </div>
+        </div>
     )
 }
-
-export default SeriesList
