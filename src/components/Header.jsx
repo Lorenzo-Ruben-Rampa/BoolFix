@@ -59,7 +59,7 @@ export default function Header(props) {
             </div>
             <div className="motto-container">
                 <h1>{props.mottoPhrase}</h1>
-                <h3>A soli 9,99 € al mese</h3>
+                <h1>A soli 9,99 € al mese</h1>
             </div>
         </header>
     );
