@@ -47,21 +47,20 @@ export default function Header(props) {
                         <button type="submit">Cerca</button>
                     </form>
                 </div>
-                <div className='image-container'>
-                    <button>Accedi</button>
+                <div className='image-container center'>
+                    <button>Login</button>
+                    <div className='container'>
+                        <div className='container'>
+                            <input className="email-input" placeholder='Inserisci la tua email' type="email" pattern=".+@example\.com" required />
+                            <button>Iscriviti</button>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div className="motto-container">
-                <h2>{props.mottoPhrase}</h2>
-                <h3>A soli 9,99 €</h3>
+                <h1>{props.mottoPhrase}</h1>
+                <h3>A soli 9,99 € al mese</h3>
             </div>
-            <div className='container'>
-                <label htmlFor="email">Inserisci la tua email</label>
-                <div>
-                    <input className="email-input" type="email" pattern=".+@example\.com" required />
-                </div>
-            </div>
-            <button>Iscriviti</button>
         </header>
     );
 }

@@ -7,12 +7,10 @@ export default function MovieList() {
     //destrutturo useContext
     const { movies } = useContext(GlobalContext)
     return (
-        <div className='results-container'>
-            <div className='container'>
-                {
-                    movies.map(movie => <MoviesCard key={movie.id} movie={movie} />)
-                }
-            </div>
+        <div className="carousel">
+            {
+                movies.map(movie => <MoviesCard key={movie.id} movie={movie} />)
+            }
         </div>
     )
 }

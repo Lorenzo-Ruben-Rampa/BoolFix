@@ -22,10 +22,15 @@ form {
   justify-content: center;
 }
 
+p {
+  max-width: 400px;
+}
+
 a {
   font-weight: 500;
   color: #530281;
   text-decoration: inherit;
+  font-size: 30px;
 }
 
 .container {
@@ -35,10 +40,6 @@ a {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-}
-
-.full-width {
-  width: 100%;
 }
 
 a:hover {
@@ -56,8 +57,9 @@ body {
 }
 
 h1 {
-  font-size: 3.2em;
+  font-size: 1em;
   line-height: 1.1;
+  text-align: center;
 }
 
 button {
@@ -84,15 +86,16 @@ button:focus-visible {
 /* header */
 header {
   width: 100%;
-  margin-left: 30px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   background-color: rgb(255, 208, 0);
+  position: sticky;
+  top: 0;
 }
 
 .image-container {
-  width: 15%;
+  width: 20%;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -107,14 +110,14 @@ header {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  padding-top: 50px;
-  align-items: center;
+  padding-top: 10px;
+  align-items: flex-start;
   margin-left: 50px;
   margin-right: 50px;
 }
 
 .logo {
-  height: 200px;
+  height: 100px;
 }
 
 .nav-menu {
@@ -135,7 +138,7 @@ li {
 /* Outlet */
 .results-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   flex-wrap: wrap;
   width: 100%;
 }
@@ -148,18 +151,52 @@ h4 {
   color: rgb(255, 230, 0);
 }
 
+.center {
+  display: flex;
+  justify-content: center;
+}
+
 .card-flag {
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
 }
 
-.card-img {
+.card {
+  height: 1300px;
+  border: 1px solid rgb(241, 197, 0);
+  padding: 20px;
+  margin: 20px;
+}
+
+.white {
+  color: white;
+}
+
+.img-card {
   border: 1px solid white;
 }
 
-.card {
+h2 {
+  max-width: 500px;
+}
+
+h3 {
+  max-width: 300px;
+}
+
+img {
+  margin-bottom: 8px;
+  max-height: 400px;
+}
+
+.carousel {
   padding: 20px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-direction: row;
 }
 
 span {
@@ -171,6 +208,7 @@ span {
 footer {
   display: flex;
   justify-content: space-between;
+  border-top: 1px solid white;
 }
 
 .container-footer {

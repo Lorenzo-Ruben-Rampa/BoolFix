@@ -7,12 +7,10 @@ export default function SeriesList() {
     //destrutturo useContext
     const { series } = useContext(GlobalContext)
     return (
-        <div className='results-container'>
-            <div className='container'>
-                {
-                    series.map(serie => <SeriesCard key={serie.id} serie={serie} />)
-                }
-            </div>
+        <div className="carousel">
+            {
+                series.map(serie => <SeriesCard key={serie.id} serie={serie} />)
+            }
         </div>
     )
 }

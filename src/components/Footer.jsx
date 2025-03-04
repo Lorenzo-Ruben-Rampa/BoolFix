@@ -35,13 +35,13 @@ export default function Footer() {
                     <li><a href="#preferenze-pubblicità">Preferenze per la pubblicità</a></li>
                 </ul>
             </div>
-            <div>
-                <p>scelta lingua, mini-logo,</p>
-                <p>Outlet: Titoli di momento Carousel, Motivi per abbonarsi Card, FAQ</p>
-            </div>
         </footer>
     );
 }
 
+{/* <div>
+<p>scelta lingua, mini-logo,</p>
+<p>Outlet: Titoli di momento Carousel, Motivi per abbonarsi Card, FAQ</p>
+</div> */}
 
 
