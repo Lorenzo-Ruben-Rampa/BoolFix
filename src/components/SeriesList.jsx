@@ -7,9 +7,8 @@ export default function SeriesList() {
     //destrutturo useContext
     const { series } = useContext(GlobalContext)
     return (
-        <div>
-            <h1>Risultati per Serie Tv</h1>
-            <div>
+        <div className='results-container'>
+            <div className='container'>
                 {
                     series.map(serie => <SeriesCard key={serie.id} serie={serie} />)
                 }
