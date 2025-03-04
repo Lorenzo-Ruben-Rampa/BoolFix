@@ -2,35 +2,37 @@ export default function ChiSiamo() {
     return (
         <>
             <section id="about-us">
-                <div>
-                    <h1>Chi Siamo</h1>
-                    <div className="row">
-                        <div className="col">
-                            <p>
-                                Benvenuti nel nostro blog! Siamo un gruppo di appassionati di cucina che ama esplorare il mondo delle pietanze a base di pane e dolci. Il nostro obiettivo è condividere ricette tradizionali e innovative che celebrano l'arte della panificazione e della pasticceria.
-                            </p>
-                            <p>
-                                In questo spazio troverai tutto ciò che riguarda il pane, dalle baguette croccanti alle focacce fragranti, e una vasta gamma di dolci, dai biscotti alle torte più elaborate. Ogni ricetta è pensata per chi ama cucinare, ma anche per chi è alle prime armi e vuole scoprire il piacere di preparare questi deliziosi piatti a casa propria.
-                            </p>
-                        </div>
-                        <div className="col mini centered">
-                            <img src="../public/imgs/posts/pane_fritto_dolce.jpeg" className="background" alt="Pane e Dolci" />
-                        </div>
+                <div className="container">
+                    <h2>Chi Siamo</h2>
+                </div>
+                <div className="container">
+                    <div>
+                        <p>
+                            Benvenuti su **BoolFlix**, il tuo servizio di streaming preferito! Siamo una piattaforma dedicata a offrire una vasta selezione di film, serie TV e documentari, per soddisfare ogni tipo di gusto. Che tu sia un appassionato di film d'azione, di commedie romantiche o di thriller avvincenti, su BoolFlix troverai sempre qualcosa da guardare.
+                        </p>
+                        <p>
+                            La nostra missione è offrirti un'esperienza di visione senza interruzioni, con una qualità video eccezionale e una vasta libreria di contenuti sempre aggiornata. Inoltre, grazie alla nostra interfaccia facile da usare, puoi navigare facilmente tra le tue serie preferite e scoprire nuovi titoli ogni giorno.
+                        </p>
                     </div>
-                    <h2>Le Nostre Passioni</h2>
-                    <div className="row">
-                        <div className="col">
-                            <h3>Pane</h3>
-                            <p>
-                                Ogni pezzo di pane che prepariamo racconta una storia. Amiamo lavorare con farine di alta qualità e sperimentare con lievitazioni naturali, per ottenere un pane che sia fragrante, soffice e ricco di sapore.
-                            </p>
-                        </div>
-                        <div className="col">
-                            <h3>Dolci</h3>
-                            <p>
-                                La nostra passione per i dolci non conosce limiti. Dai dolci semplici come biscotti e croissant a quelli più complessi come torte e pasticcini, ogni dolce che prepariamo è un'esplosione di sapori e creatività.
-                            </p>
-                        </div>
+                    <div>
+                        <img src="../public/imgs/hd-error.png" className="background" alt="Pane e Dolci" />
+                    </div>
+                </div>
+                <div className="container">
+                    <h2>Le Nostre Offerte</h2>
+                </div>
+                <div className="container">
+                    <div>
+                        <h3>Film</h3>
+                        <p>
+                            Su BoolFlix puoi accedere a una vasta gamma di film, dai grandi successi di Hollywood ai film indipendenti, passando per le produzioni internazionali. Ogni mese aggiungiamo nuovi titoli per garantirti sempre un'ampia scelta di film da guardare in ogni momento.
+                        </p>
+                    </div>
+                    <div>
+                        <h3>Serie TV</h3>
+                        <p>
+                            Se ami le serie TV, su BoolFlix troverai tutte le tue preferite. Dalle serie più recenti a quelle più longeve, potrai seguire ogni episodio in qualità HD e senza interruzioni. Inoltre, con i nostri contenuti esclusivi, potrai accedere a serie che non troverai su nessun altro servizio.
+                        </p>
                     </div>
                 </div>
             </section>

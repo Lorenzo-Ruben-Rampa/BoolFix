@@ -13,8 +13,18 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.col {
+  margin: 20px;
+}
+
 input {
   margin: 8px;
+}
+
+.row {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 form {
@@ -24,6 +34,7 @@ form {
 
 p {
   max-width: 400px;
+  margin-right: 25px;
 }
 
 a {
