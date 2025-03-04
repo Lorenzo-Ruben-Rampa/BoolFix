@@ -140,6 +140,14 @@ li {
   width: 100%;
 }
 
+h4 {
+  margin-right: 5px;
+}
+
+.gold {
+  color: rgb(255, 230, 0);
+}
+
 .card-flag {
   display: flex;
   flex-wrap: nowrap;

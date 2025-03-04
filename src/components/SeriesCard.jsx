@@ -1,6 +1,11 @@
 import Flag from 'react-world-flags';
 
 export default function SeriesCard() {
+    // Trasformiamo il voto da una scala 1-10 a una scala 1-5
+    const voteToStars = Math.round(serie.vote_average / 2);
+
+    // Creiamo un array di stelle piene e vuote
+    const stars = Array.from({ length: 5 }, (_, index) => index < voteToStars);
     return (
         <div className="container card">
             <div className="card">
@@ -17,7 +22,17 @@ export default function SeriesCard() {
                                 : <span>Sconosciuto</span>}
                     </span>
                 </div>
-                <h4>Voto: {serie.vote_average}</h4>
+                {/* Voto in stelle */}
+                <div className="card-flag">
+                    <h4>Voto:</h4>
+                    {stars.map((star, index) => (
+                        <i
+                            key={index}
+                            className={`fa-${star ? 'solid' : 'regular'} fa-star gold`}
+                        />
+                    ))}
+                </div>
+
             </div>
         </div>
     )
