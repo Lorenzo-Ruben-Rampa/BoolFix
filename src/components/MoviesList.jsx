@@ -6,6 +6,7 @@ export default function MovieList() {
 
     //destrutturo useContext
     const { movies } = useContext(GlobalContext)
+
     return (
         <div className="carousel">
             {

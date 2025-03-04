@@ -48,6 +48,7 @@ function App() {
       });
   }
 
+
   // useEffect per chiamare la funzione quando cambia la query
   useEffect(() => {
     if (query) {
