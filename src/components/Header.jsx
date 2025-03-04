@@ -1,6 +1,5 @@
 import { useContext, useState } from 'react';
 import Navbar from "./Navbar.jsx";
-import Flag from 'react-world-flags';
 import GlobalContext from '../contexts/GlobalContext';
 
 export default function Header(props) {
@@ -67,12 +66,6 @@ export default function Header(props) {
     );
 }
 
-{/* <h3>
-    <Flag code="IT" />
-    {movies.original_language === "en" ? <Flag code="GB" /> :
-    movies.original_language === "it" ? <Flag code="IT" /> :
-        "altro"}
-</h3> */}
 
 // // passo le props della card
 // const MoviesCard = props;

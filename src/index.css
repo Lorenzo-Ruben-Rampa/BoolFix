@@ -140,12 +140,22 @@ li {
   width: 100%;
 }
 
+.card-flag {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
 .card-img {
   border: 1px solid white;
 }
 
 .card {
   padding: 20px;
+}
+
+span {
+  margin-left: 8px;
 }
 
 /* Footer */
