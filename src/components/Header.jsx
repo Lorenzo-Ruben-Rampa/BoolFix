@@ -1,73 +1,78 @@
+import { useContext, useState } from 'react';
 import Navbar from "./Navbar.jsx";
-import Flag from 'react-world-flags'
+import Flag from 'react-world-flags';
+import GlobalContext from '../contexts/GlobalContext';
 
 export default function Header(props) {
+
+    //destrutturo useContext
+    const { setQuery, fetchMoviesAndSeries } = useContext(GlobalContext);
 
     // dati ricavati per la gestione dei link della Navbar
     const links = [
         { id: 1, text: 'Home', url: '/', current: true },
-        { id: 2, text: 'Chi Siamo', url: '/ChiSiamo', current: true },
-        { id: 3, text: 'Contatti', url: '/Contatti', current: true }
+        { id: 2, text: 'Chi Siamo', url: '/ChiSiamo', current: false },
+        { id: 3, text: 'Contatti', url: '/Contatti', current: false }
     ];
+
+    const [inputValue, setInputValue] = useState("");
 
     // funzione di gestione dell'invio dell'intero form (tutte le info dei vari campi)
     function handleSubmit(e) {
         e.preventDefault();
+        if (inputValue.trim() === "") return;
+        setQuery(inputValue);
+        fetchMoviesAndSeries();
+        setInputValue("");
     }
 
-    const motto = "La piattaforma ideale per guardare i tuoi film e serie preferiti in compagnia con un solo account. Perché la felicità è reale solo quand'è condivisa.";
+    const handleInputChange = (event) => {
+        const value = event.target.value;
+        setInputValue(value);
+    };
 
     return (
         <header>
-            <Navbar linksProp={links} />
-            <div className="image-container">
-                <img src="/img/BoolFix-logo.png" alt="logo-BoolFix" />
+            <div className="header-line">
+                <Navbar linksProp={links} />
+                <div className="image-container">
+                    <img className="logo" src="/imgs/BoolFix-logo.png" alt="logo-BoolFix" />
+                    <form id='formpost' action="#" onSubmit={handleSubmit}>
+                        <input
+                            className="header-input"
+                            type="text"
+                            value={inputValue}
+                            onChange={handleInputChange}
+                            placeholder="Cerca film o serie TV..."
+                        />
+                        <button type="submit">Cerca</button>
+                    </form>
+                </div>
+                <div className='image-container'>
+                    <button>Accedi</button>
+                </div>
             </div>
-            <p>select lingua, Accedi, Motto con sotto prezzo, Inserisci email + button inizia</p>
-            <Flag code="IT" />
-            <h3>
-                {filmCardProp.original_language === "en" ? <Flag code="GB" /> :
-                    filmCardProp.original_language === "it" ? <Flag code="IT" /> :
-                        "altro"}
-            </h3>
-            <div>
-                <form id='formpost' action="#" onSubmit={handleSubmit}>
-                    {/* valore nome post */}
-                    <input
-                        type="text"
-                        name="name"
-                        value={movieRequest.name}
-                        placeholder='Titolo: '
-                    />
-                    {/* valore nome post */}
-                    <input
-                        type="text"
-                        name="name"
-                        value={movieRequest.name}
-                        placeholder='Titolo Originale: '
-                    />
-                    {/* valore nome post */}
-                    <input
-                        type="text"
-                        name="name"
-                        value={movieRequest.name}
-                        placeholder='Lingua: '
-                    />
-                    {/* valore nome post */}
-                    <input
-                        type="text"
-                        name="name"
-                        value={movieRequest.name}
-                        placeholder='Voto: '
-                    />
-                </form>
-                <button onClick={fetchTodos}>Carica Todos</button>
-                <ul>
-                    {todos.map((todo) => (
-                        <li key={todo.id}>{todo.title}</li>
-                    ))}
-                </ul>
+            <div className="motto-container">
+                <h2>{props.mottoPhrase}</h2>
+                <h3>A soli 9,99 €</h3>
             </div>
+            <div className='container'>
+                <label htmlFor="email">Inserisci la tua email</label>
+                <div>
+                    <input className="email-input" type="email" pattern=".+@example\.com" required />
+                </div>
+            </div>
+            <button>Iscriviti</button>
         </header>
     );
 }
+
+{/* <h3>
+    <Flag code="IT" />
+    {movies.original_language === "en" ? <Flag code="GB" /> :
+    movies.original_language === "it" ? <Flag code="IT" /> :
+        "altro"}
+</h3> */}
+
+// // passo le props della card
+// const MoviesCard = props;

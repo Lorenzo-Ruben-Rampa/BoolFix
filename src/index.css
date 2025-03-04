@@ -13,11 +13,34 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+input {
+  margin: 8px;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+}
+
 a {
   font-weight: 500;
-  color: #646cff;
+  color: #530281;
   text-decoration: inherit;
 }
+
+.container {
+  margin-left: 50px;
+  margin-right: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.full-width {
+  width: 100%;
+}
+
 a:hover {
   color: #535bf2;
 }
@@ -28,6 +51,8 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  color: orangered;
+  background-color: black;
 }
 
 h1 {
@@ -46,12 +71,93 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
+
 button:hover {
   border-color: #646cff;
 }
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+/* header */
+header {
+  width: 100%;
+  margin-left: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: rgb(255, 208, 0);
+}
+
+.image-container {
+  width: 15%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.email-input {
+  margin: 8px;
+  max-width: 100%;
+}
+
+.header-line {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 50px;
+  align-items: center;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.logo {
+  height: 200px;
+}
+
+.nav-menu {
+  display: flex;
+  flex-direction: row;
+}
+
+li {
+  margin: 30px;
+  color: rgb(241, 197, 0);
+}
+
+.motto-container {
+  text-align: center;
+  width: 100%;
+}
+
+/* Outlet */
+.results-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.card-img {
+  border: 1px solid white;
+}
+
+.card {
+  padding: 20px;
+}
+
+/* Footer */
+
+footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.container-footer {
+  margin-left: 50px;
+  margin-right: 50px;
 }
 
 @media (prefers-color-scheme: light) {
@@ -59,10 +165,14 @@ button:focus-visible {
     color: #213547;
     background-color: #ffffff;
   }
+
   a:hover {
     color: #747bff;
   }
+
   button {
     background-color: #f9f9f9;
+    margin: 8px;
+    border: 1px solid black;
   }
 }

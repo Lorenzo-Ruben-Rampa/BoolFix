@@ -2,7 +2,7 @@ import { useContext } from 'react';
 import GlobalContext from '../contexts/GlobalContext';
 import SeriesCard from '../components/SeriesCard';
 
-export default function SeriesList {
+export default function SeriesList() {
 
     //destrutturo useContext
     const { series } = useContext(GlobalContext)

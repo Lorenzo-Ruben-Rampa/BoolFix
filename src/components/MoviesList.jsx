@@ -1,17 +1,16 @@
 import { useContext } from 'react';
 import GlobalContext from '../contexts/GlobalContext';
-import SeriesCard from '../components/MovieCard';
+import MoviesCard from './MoviesCard';
 
 export default function MovieList() {
 
     //destrutturo useContext
     const { movies } = useContext(GlobalContext)
     return (
-        <div>
-            <h1>Risultati per Film</h1>
-            <div>
+        <div className='results-container'>
+            <div className='container'>
                 {
-                    series.map(movie => <MoviesCard key={movie.id} movie={movie} />)
+                    movies.map(movie => <MoviesCard key={movie.id} movie={movie} />)
                 }
             </div>
         </div>
